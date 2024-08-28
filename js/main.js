@@ -26,6 +26,7 @@ colorSelectButtons.forEach((colorSelectButton) =>
     {
         updateImage(e)
         updateActiveButton(e)
+        updateBagInfo()
     })
 })
 
@@ -42,7 +43,7 @@ function updateActiveButton(e)
         e.target.classList.add('active')
     })
 
-    updateBagInfo()
+    
 }
 
 
