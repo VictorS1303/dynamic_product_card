@@ -1,0 +1,36 @@
+:root
+{
+    /* Colors */
+    --card-surface: #e5e5e5;
+    --info-box-surface: #fff;
+    
+    --color-option-1: #000;
+    --color-option-2: #efdbb8;
+    --color-option-3: #d8deff;
+    
+    --card-like-btn-surface: #fff;
+    --card-like-btn-color: #000;
+    
+    /* Spacing */
+    --card-padding: 1rem;
+    --info-box-padding: 1.25rem;
+    --info-box-gap: 1rem;
+    --card-option-gap: 1ch;
+    
+    /* Dimensions */
+    --card-option-width: 1.25rem;
+    --card-option-height: 1.25rem;
+    
+    --card-like-btn-width: 1.5rem;
+    --card-like-btn-height: 1.5rem;
+    
+    /* Font sizes */
+    --card-title: 1rem;
+    --card-price: 1.35rem;
+    
+    /* border-radii */
+    --card-radius: calc(var(--card-padding) + var(--info-box-radius));
+    --info-box-radius: 1.75rem;
+    --card-button-radius: 1e5px;
+      
+}

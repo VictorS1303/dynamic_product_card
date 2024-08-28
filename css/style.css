@@ -1,0 +1,141 @@
+
+  
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Card */
+  .card {
+    position: relative;
+    border-radius: var(--card-radius);
+    display: grid;
+    max-width: 400px;
+    background: var(--card-surface);
+    padding: var(--card-padding);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    & img
+    {
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+  
+    /* Card Like Button */
+    & button.btn.like-btn {
+      display: grid;
+      place-content: center;
+      position: absolute;
+      right: 20px;
+      color: var(--card-like-btn-color);
+      background-color: var(--card-like-btn-surface);
+      height: 60px;
+      width: 60px;
+      padding: 20px;
+      border-radius: var(--card-button-radius);
+      transition: color 0.15s ease-in, background 0.15s ease-in;
+      cursor: pointer;
+  
+      & svg {
+        height: 30px;
+        width: 30px;
+      }
+  
+      &:is(:hover, :focus, :focus-visible) {
+        color: #fff;
+        background-color: red;
+        transition: color 0.15s ease-in, background 0.15s ease-in;
+      }
+    }
+  
+    /* Card Product Info Container */
+    & .product-info-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--info-box-padding);
+      gap: var(--info-box-gap);
+      white-space: nowrap;
+      background-color: #fff;
+      border-radius: var(--info-box-radius);
+  
+      & h3 {
+        font-size: var(--card-title);
+      }
+  
+      & p {
+        font-size: var(--card-price);
+        font-weight: bolder;
+      }
+  
+      & .product-color-select-container {
+        display: flex;
+        gap: var(--card-option-gap);
+  
+        & button {
+          height: var(--card-option-height);
+          width: var(--card-option-width);
+          border-radius: 100%;
+          cursor: pointer;
+
+          &.active
+          {
+            outline: 2px solid #333;
+            outline-offset: 2px;
+          }
+  
+          &:not(.active):is(:hover, :focus) {
+            outline: 2px solid lightblue;
+            outline-offset: 2px; 
+          }
+  
+          &:nth-child(1) {
+            background-color: var(--color-option-1);
+          }
+  
+          &:nth-child(2) {
+            background-color: var(--color-option-2);
+          }
+  
+          &:nth-child(3) {
+            background-color: var(--color-option-3);
+          }
+        }
+      }
+    }
+  }
+  
+  @layer reset {
+    html {
+      background: #fff;
+      font-family: system-ui;
+    }
+  
+    body {
+      margin: 2rem;
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+  
+    button {
+      border: 0;
+    }
+  
+    img {
+      inline-size: 100%;
+      display: block;
+    }
+  
+    ul,
+    ol,
+    menu {
+      padding: 0;
+      list-style: none;
+    }
+  }
+  
