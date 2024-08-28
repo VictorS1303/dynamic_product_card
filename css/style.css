@@ -43,7 +43,13 @@
         width: 30px;
       }
   
-      &:is(:hover, :focus, :focus-visible) {
+      &:is(:hover)
+      {
+         color: #fff;
+         background-color: rgb(241, 148, 148);
+      }
+
+      &:is(:focus, :focus-visible) {
         color: #fff;
         background-color: red;
         transition: color 0.15s ease-in, background 0.15s ease-in;
